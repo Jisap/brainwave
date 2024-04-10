@@ -2,8 +2,7 @@ import { smallSphere, stars } from '../assets'
 import Section from './Section'
 import Heading from "./Heading";
 import PricingList from './PricingList';
-import LeftLine from './LeftLine';
-import RightLine from './RightLine';
+import { LeftLine, RightLine } from "./design/Pricing";
 
 
 
