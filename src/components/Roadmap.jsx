@@ -14,18 +14,22 @@ const Roadmap = () => (
         title="What we’re working on" 
       />
 
+      {/* Estructura de la tarjeta */}
       <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
           const status = item.status === "done" ? "Done" : "In progress";
 
           return (
             <div
+              // Cada tarjeta tendrá un desplazamiento en "y" y un color según sea par o impar
               className={`md:flex even:md:translate-y-[7rem] p-0.25 rounded-[2.5rem] ${
                 item.colorful ? "bg-conic-gradient" : "bg-n-6"
               }`}
               key={item.id}
             >
               <div className="relative p-8 bg-n-8 rounded-[2.4375rem] overflow-hidden xl:p-15">
+                
+                {/* imagen de cuadrícula de fondo */}
                 <div className="absolute top-0 left-0 max-w-full">
                   <img
                     className="w-full"
@@ -35,7 +39,9 @@ const Roadmap = () => (
                     alt="Grid"
                   />
                 </div>
+
                 <div className="relative z-1">
+                  {/* tagline + boton de status */}
                   <div className="flex items-center justify-between max-w-[27rem] mb-8 md:mb-20">
                     <Tagline>{item.date}</Tagline>
 
@@ -51,6 +57,7 @@ const Roadmap = () => (
                     </div>
                   </div>
 
+                  {/* imagen sobre la cuadrícula */}
                   <div className="mb-10 -my-10 -mx-15">
                     <img
                       className="w-full"
