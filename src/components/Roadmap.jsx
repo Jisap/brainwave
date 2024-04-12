@@ -17,6 +17,7 @@ const Roadmap = () => (
       {/* Estructura de la tarjeta */}
       <div className="relative grid gap-6 md:grid-cols-2 md:gap-4 md:pb-[7rem]">
         {roadmap.map((item) => {
+        
           const status = item.status === "done" ? "Done" : "In progress";
 
           return (
